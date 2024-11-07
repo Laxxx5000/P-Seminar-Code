@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="post">
+        <label for="username">username:</label>
+        <input type="text" id="username" placeholder="Nerver gonna give u up..." minlength="6" maxlength="16" required>
+        
+        <br><label for="password">password:</label>
+        <input type="password" id="password" placeholder="password" minlength="8" maxlength="40" required>
+        
+        <br><label for="email">E-Mail:</label>
+        <input type="email" id="email" placeholder="E-Mail">
+
+        <br><label for="phone">Phone number:</label>
+        <input type="tel" id="phone" placeholder="123-435-8835" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        
+        <br><label for="date">Birth-Date:</label>
+        <input type="date" id="date" >
+        <div style="margin: 15px;">
+            <input type="reset" style="background-color: salmon;">
+            <input type="submit" style="background-color: lightgreen;">
+        </div>
+    </form>
+</body>
+</html>
