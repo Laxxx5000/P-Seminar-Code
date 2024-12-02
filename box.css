@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+    width: 100%;
+}
+
+.hover-box {
+    position: relative;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: height 0.3s ease, box-shadow 0.3s ease;
+    height: 50px; /* Standardhöhe */
+}
+
+.hover-box h3 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.hover-box p {
+    margin: 0;
+    padding: 10px;
+    background-color: #33333300;
+    font-size: 0.9rem;
+    display: none; /* Standardmäßig verborgen */
+}
+
+.hover-box:hover {
+    height:  120px; /* Erweiterte Höhe */
+    box-shadow: inset 5px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hover-box:hover p {
+    display: block; /* Inhalt sichtbar machen */           
+}
