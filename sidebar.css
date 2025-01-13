@@ -6,6 +6,7 @@ body {
  .top-bar {
     background-color: #222;
     color: #78A660;
+    border: solid 0.2px;
     padding: 10px 20px;
     display: flex;
     justify-content: space-evenly;
