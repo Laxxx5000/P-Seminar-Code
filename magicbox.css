@@ -51,12 +51,12 @@
     opacity: 0;
    }
    
-   .card:hover a #2{
+   .card:hover a {
     color: #f7ba2b;
     text-decoration: underline;
     transition: color 1s ;
    }
-   .card:hover a #1{
+   .card:hover a {
     color: #f7ba2b;
     text-decoration: underline;
     transition: color 1s ;
