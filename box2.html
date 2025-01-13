@@ -9,6 +9,35 @@
     <link rel="stylesheet" href="sidebar.css">
 </head>
 <body>
+    <header class="top-bar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+            ☰
+        </div>
+        
+        <div class="site-name">Hoki-Guide</div>
+        
+        
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#services">Leistungen</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        
+    </header>
+    
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#subpage1">Unterseite 1</a></li>
+            <li><a href="#subpage2">Unterseite 2</a></li>
+            <li><a href="#subpage3">Unterseite 3</a></li>
+            <li><a href="#subpage4">Unterseite 4</a></li>
+        </ul>
+    </aside>
+    <main>
     <div class="button-grid">
         <div class="button-wrapper">
             <button class="grid-button">Button 1</button>
@@ -31,4 +60,8 @@
             <div class="button-info">Mehr Info zu Button 5</div>
         </div>
         <div class="button-wrapper">
+        </main>   
+
+        <script src="sidebar.js"> </script>
+</body>
      
