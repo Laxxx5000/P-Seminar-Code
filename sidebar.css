@@ -61,6 +61,7 @@
  .sidebar a:hover {
     background-color: #444;
     text-decoration:underline;
+    transition: all 300ms;
  }
  .sidebar.open {
     left: 0;
