@@ -1,8 +1,7 @@
  .top-bar {
     background-color: #222;
     color: #78A660;
-    border: solid 2px;
-    border-color: white;
+
     padding: 10px 20px;
     display: flex;
     justify-content: space-evenly;
