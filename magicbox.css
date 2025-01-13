@@ -50,14 +50,8 @@
    .card:hover::after {
     opacity: 0;
    }
-   
    .card:hover a {
-    color: #f7ba2b;
-    text-decoration: underline;
-    transition: color 1s ;
-   }
-   .card:hover a {
-    color: #f7ba2b;
+    color: #78A660;
     text-decoration: underline;
     transition: color 1s ;
    }
