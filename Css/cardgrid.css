@@ -1,0 +1,27 @@
+@font-face {
+    font-family: roboto-variable;
+    src: url(fonts/Roboto-Medium.ttf);
+}
+.card-container {
+    display: grid;
+    
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center; /* Markiert: Horizontale Zentrierung */
+    align-items: center;
+    height: 60vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-left: 25%;
+}
+
+.gruss{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 10vh;
+    font-size: 28px;
+    font-family: roboto-variable;
+    
+}
