@@ -1,6 +1,6 @@
 @font-face {
     font-family: roboto-variable;
-    src: url(fonts/Roboto-Medium.ttf);
+    src: url(../fonts/Roboto-Medium.ttf);
 }
 .card-container {
     display: grid;
