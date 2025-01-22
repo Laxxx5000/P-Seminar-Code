@@ -17,6 +17,12 @@
     padding-left: 25%;
 }
 
+@media (max-width: 768px) {
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
 .gruss{
     display: flex;
     justify-content: center;
