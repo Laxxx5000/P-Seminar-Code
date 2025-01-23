@@ -1,4 +1,4 @@
-.language-element{
+   /* .language-element{
     padding-left: 100px;
     
     }
@@ -23,7 +23,7 @@
     .deZumWählen:hover{
        background-color: #333;
     } */
-    .enZumWählen{
+    /* .enZumWählen{
        border:solid;
        width:2em;
        background-color: #222;
@@ -43,7 +43,7 @@
     .enZumWählen:hover{
        background-color: #333;
     }
-    
+     */
     /* .enAusgewählt{
        border:solid;
        background-color: #F3B47C;
@@ -59,7 +59,7 @@
        border-width: 2px;
     
     }  */
-    .deAusgewählt{
+    /* .deAusgewählt{
        margin-right: -4px;
        border:solid;
        background-color: #F3B47C;
@@ -73,4 +73,58 @@
        border-top-left-radius: 5px;
        border-bottom-left-radius: 5px;
        border-width: 2px;
-    }
+    } 
+      */
+
+      /* Version 2 des Language Switchers (find ich besser) */
+
+      #en{
+         display: none;
+         }
+         
+         .language-element{
+            height: 25px;
+            width: 6em;
+            display: flex;
+            border-radius: 5px;
+            border: solid;
+            border-color: #222;
+            background-color:#222;
+            cursor: pointer;
+         
+         }
+         
+         .language-element-de{
+            height: 25px;
+            width: 6em;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 25px;
+         }
+         .enZumWählen{
+            height: 25px;
+            width: 6em;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 25px;
+         }
+         
+         #de-links{
+            background-color: #F3B47C;
+         }
+         #de-rechts{
+            background-color: #333;
+            color:#F3B47C;
+         }
+         
+         #en-links{
+            background-color: #333;
+            color:#F3B47C;
+         }
+         #en-rechts{
+            background-color: #F3B47C;
+         }
