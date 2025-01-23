@@ -7,14 +7,14 @@
        width:2em;
        margin-right: -4px;
        background-color: #222;
-       color:#78A660;
+       color:#F3B47C;
        font-size: 1.01em;
        text-align: left;
        font-family: roboto-variable;
        src: url(../fonts/Roboto-Medium.ttf);
        border-top-left-radius: 5px;
        border-bottom-left-radius:5px;
-       border-color: #78A660;
+       border-color: #F3B47C;
        border-right: none;
        border-width: 2px;
        padding-right: 0;
@@ -46,14 +46,14 @@
     
     /* .enAusgewählt{
        border:solid;
-       background-color: #78A660;
+       background-color: #F3B47C;
        color: #222;
        font-size: 1.01em;
        font-family: roboto-variable;
        src: url(../fonts/Roboto-Medium.ttf);
        border-left:none;
        border-color:#78A660;
-       border-bottom-color:#78A660;
+       border-bottom-color:#F3B47C;
        border-top-right-radius: 5px;
        border-bottom-right-radius: 5px;
        border-width: 2px;
