@@ -27,14 +27,14 @@
        border:solid;
        width:2em;
        background-color: #222;
-       color:#78A660;
+       color:#F3B47C;
        font-size: 1.01em;
        text-align: left;
        font-family: roboto-variable;
        src: url(../fonts/Roboto-Medium.ttf);
        border-top-right-radius: 5px;
        border-bottom-right-radius:5px;
-       border-color: #78A660;
+       border-color: #F3B47C;
        border-left: none;
        border-width: 2px;
        padding-right: 0;
@@ -62,14 +62,14 @@
     .deAusgewählt{
        margin-right: -4px;
        border:solid;
-       background-color: #78A660;
+       background-color: #F3B47C;
        color: #222;
        font-size: 1.01em;
        font-family: roboto-variable;
        src: url(../fonts/Roboto-Medium.ttf);
        border-right:none;
-       border-color:#78A660;
-       border-bottom-color:#78A660;
+       border-color:#F3B47C;
+       border-bottom-color:#F3B47C;
        border-top-left-radius: 5px;
        border-bottom-left-radius: 5px;
        border-width: 2px;
