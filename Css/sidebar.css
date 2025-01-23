@@ -1,6 +1,6 @@
  .top-bar {
     background-color: #222;
-    color: #78A660;
+    color: #F3B47C;
 
     padding: 10px 20px;
     display: flex;
@@ -34,7 +34,7 @@
     width: 250px;
     height: 100%;
     background-color: #333;
-    color: #78A660;
+    color: #F3B47C;
     transition: left 0.4s ease;
     box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2);
     z-index: 1000;
@@ -50,7 +50,7 @@
     padding: 10px 20px;
  }
  .sidebar a {
-    color: #78A660;
+    color: #F3B47C;
     text-decoration: none;
     font-size: 18px;
     display: block;
@@ -78,7 +78,7 @@
 }
 
 .navigation a {
-    color: #78A660;
+    color: #F3B47C;
     text-decoration: none;
     font-size: 16px;
     padding: 5px;
