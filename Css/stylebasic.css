@@ -13,6 +13,9 @@ body{
     margin-top: 15vh;
     margin-right: 10vw;
 }
+main{
+    margin-top: 11vh;
+}
 #langeslorem{
     line-height: 1.5;
 }
