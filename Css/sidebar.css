@@ -1,7 +1,7 @@
  .top-bar {
     background-color: #222;
     color: #F3B47C;
-
+    z-index: 1000;
     padding: 10px 20px;
     display: flex;
     justify-content: space-evenly;
