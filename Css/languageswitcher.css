@@ -78,53 +78,62 @@
 
       /* Version 2 des Language Switchers (find ich besser) */
 
-      #en{
-         display: none;
-         }
-         
-         .language-element{
-            height: 25px;
-            width: 6em;
-            display: flex;
-            border-radius: 5px;
-            border: solid;
-            border-color: #222;
-            background-color:#222;
-            cursor: pointer;
-         
-         }
-         
-         .language-element-de{
-            height: 25px;
-            width: 6em;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            text-align: center;
-            vertical-align: middle;
-            line-height: 25px;
-         }
-         .enZumWählen{
-            height: 25px;
-            width: 6em;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            text-align: center;
-            vertical-align: middle;
-            line-height: 25px;
-         }
-         
-         #de-links{
-            background-color: #F3B47C;
-         }
-         #de-rechts{
-            background-color: #333;
-            color:#F3B47C;
-         }
-         
-         #en-links{
-            background-color: #333;
-            color:#F3B47C;
-         }
-         #en-rechts{
-            background-color: #F3B47C;
-         }
+#en{
+      display: none;
+}
+   
+.language-element {
+   display: flex;
+   width: 80px; /* Feste Breite für Konsistenz */
+   height: 30px; /* Etwas größere Höhe für bessere Skalierung */
+   border-radius: 5px; /* Border-Radius bleibt */
+   border: 1px solid #222;
+   background-color: #222;
+   cursor: pointer;
+   overflow: hidden;
+}
+
+.language-element span {
+   flex: 1; /* Gleichmäßige Aufteilung */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 14px;
+   font-weight: bold;
+}
+
+.language-element-de {
+   border-top-left-radius: 5px; 
+   border-bottom-left-radius: 5px;
+}
+
+.enZumWählen {
+   border-top-right-radius: 5px; 
+   border-bottom-right-radius: 5px;
+}
+#de-links{
+   background-color: #F3B47C;
+}
+#de-rechts{
+   background-color: #333;
+   color:#F3B47C;
+}
+   
+#en-links{
+   background-color: #333;
+   color:#F3B47C;
+}
+#en-rechts{
+   background-color: #F3B47C;
+}
+
+   /* Falls es auf dem iPad weiterhin Probleme gibt */
+   @media screen and (max-width: 1024px) {
+   .language-element {
+         width: 90px; /* Kleinere Anpassungen für iPads */
+   }
+
+   .language-element span {
+         font-size: 15px;
+   }
+}
