@@ -140,6 +140,7 @@
             margin-top: 20px;
             width: 90px; /* Kleinere Anpassungen für iPads */
             height: 50px;
+            align-items: center;
       }
       #de-links{
          color:#333 ;
