@@ -131,7 +131,7 @@
    @media screen and (max-width: 1024px) {
       .language-element {
             width: 90px; /* Kleinere Anpassungen für iPads */
-            height: 40px;
+            height: 50px;
       }
       #de-links{
          color:#333 ;
