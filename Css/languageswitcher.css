@@ -128,4 +128,15 @@
 }
 
    /* Falls es auf dem iPad weiterhin Probleme gibt */
- 
+   @media screen and (max-width: 1024px) {
+      .language-element {
+            width: 90px; /* Kleinere Anpassungen für iPads */
+            height: 40px;
+      }
+      #de-links{
+         color:#333 ;
+      }
+      .language-element span {
+            font-size: 15px;
+      }
+      }
