@@ -137,7 +137,6 @@
    /* Falls es auf dem iPad weiterhin Probleme gibt */
    @media screen and (max-width: 1024px) {
       .language-element {
-            margin-top: 20px;
             width: 90px; /* Kleinere Anpassungen für iPads */
             height: 50px;
             align-items: center;
