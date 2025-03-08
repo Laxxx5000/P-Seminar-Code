@@ -1,83 +1,4 @@
-   /* .language-element{
-    padding-left: 100px;
-    
-    }
-    /* .deZumWählen{
-       border:solid;
-       width:2em;
-       margin-right: -4px;
-       background-color: #222;
-       color:#F3B47C;
-       font-size: 1.01em;
-       text-align: left;
-       font-family: roboto-variable;
-       src: url(../fonts/Roboto-Medium.ttf);
-       border-top-left-radius: 5px;
-       border-bottom-left-radius:5px;
-       border-color: #F3B47C;
-       border-right: none;
-       border-width: 2px;
-       padding-right: 0;
-       cursor:pointer;
-    }
-    .deZumWählen:hover{
-       background-color: #333;
-    } */
-    /* .enZumWählen{
-       border:solid;
-       width:2em;
-       background-color: #222;
-       color:#F3B47C;
-       font-size: 1.01em;
-       text-align: left;
-       font-family: roboto-variable;
-       src: url(../fonts/Roboto-Medium.ttf);
-       border-top-right-radius: 5px;
-       border-bottom-right-radius:5px;
-       border-color: #F3B47C;
-       border-left: none;
-       border-width: 2px;
-       padding-right: 0;
-       cursor:pointer;
-    }
-    .enZumWählen:hover{
-       background-color: #333;
-    }
-     */
-    /* .enAusgewählt{
-       border:solid;
-       background-color: #F3B47C;
-       color: #222;
-       font-size: 1.01em;
-       font-family: roboto-variable;
-       src: url(../fonts/Roboto-Medium.ttf);
-       border-left:none;
-       border-color:#78A660;
-       border-bottom-color:#F3B47C;
-       border-top-right-radius: 5px;
-       border-bottom-right-radius: 5px;
-       border-width: 2px;
-    
-    }  */
-    /* .deAusgewählt{
-       margin-right: -4px;
-       border:solid;
-       background-color: #F3B47C;
-       color: #222;
-       font-size: 1.01em;
-       font-family: roboto-variable;
-       src: url(../fonts/Roboto-Medium.ttf);
-       border-right:none;
-       border-color:#F3B47C;
-       border-bottom-color:#F3B47C;
-       border-top-left-radius: 5px;
-       border-bottom-left-radius: 5px;
-       border-width: 2px;
-    } 
-      */
-
-      /* Version 2 des Language Switchers (find ich besser) */
-
+   
 #en{
       display: none;
 }
@@ -134,7 +55,6 @@
    background-color: #F3B47C;
 }
 
-   /* Falls es auf dem iPad weiterhin Probleme gibt */
    @media screen and (max-width: 1024px) {
       .language-element {
             width: 90px; /* Kleinere Anpassungen für iPads */
