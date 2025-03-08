@@ -128,12 +128,4 @@
 }
 
    /* Falls es auf dem iPad weiterhin Probleme gibt */
-   @media screen and (max-width: 1024px) {
-   .language-element {
-         width: 90px; /* Kleinere Anpassungen für iPads */
-   }
-
-   .language-element span {
-         font-size: 15px;
-   }
-}
+ 
