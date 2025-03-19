@@ -1,0 +1,35 @@
+
+        .box {
+            margin-left: 10%;
+            width: 80%;
+            background: #222;
+            border: 1px solid #222;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: max-height 1s ease-out;
+            max-height: 80px;
+        }
+        .box-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .arrow {
+            transition: transform 0.3s ease-out;
+        }
+        .content {
+            padding: 15px;
+            display: none;
+            font-size: 18px;
+        }
+        .expanded {
+            max-height: 300px;
+        }
+        .rotated {
+            transform: rotate(180deg);
+        }
