@@ -48,7 +48,7 @@
 
     <div class="box" id="toggleBox">
         <div class="box-header"  onclick="toggleBox()">
-            <span>Überschrift</span>
+            <span>Il Crostino</span>
             <span class="arrow" id="arrow">&#9660;</span>
         </div>
         <div class="content" id="content">
@@ -56,14 +56,78 @@
         </div>
     </div>
 
+    <div class="box" id="toggleBox2">
+        <div class="box-header"  onclick="toggleBox2()">
+            <span>Ristorante da Franco</span>
+            <span class="arrow" id="arrow2">&#9660;</span>
+        </div>
+        <div class="content" id="content2">
+            <p>Lorem500</p>
+        </div>
+    </div>
 
+    <div class="box" id="toggleBox3">
+        <div class="box-header"  onclick="toggleBox3()">
+            <span>Ristorante da Tosto</span>
+            <span class="arrow" id="arrow3">&#9660;</span>
+        </div>
+        <div class="content" id="content3">
+            <p>Lorem500</p>
+        </div>
+    </div>
 
 
 
 
     </main>
     <script src="/standart.js"></script>
-    <script src="/neueBox.js"></script>
+    <script>
+        function toggleBox() {
+    const box = document.getElementById("toggleBox");
+    const content = document.getElementById("content");
+    const arrow = document.getElementById("arrow");
+    
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        box.classList.add("expanded");
+        arrow.classList.add("rotated");
+    } else {
+        content.style.display = "none";
+        box.classList.remove("expanded");
+        arrow.classList.remove("rotated");
+    }
+}
+function toggleBox2() {
+    const box = document.getElementById("toggleBox2");
+    const content = document.getElementById("content2");
+    const arrow = document.getElementById("arrow2");
+    
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        box.classList.add("expanded");
+        arrow.classList.add("rotated");
+    } else {
+        content.style.display = "none";
+        box.classList.remove("expanded");
+        arrow.classList.remove("rotated");
+    }
+}
+function toggleBox3() {
+    const box = document.getElementById("toggleBox3");
+    const content = document.getElementById("content3");
+    const arrow = document.getElementById("arrow3");
+    
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        box.classList.add("expanded");
+        arrow.classList.add("rotated");
+    } else {
+        content.style.display = "none";
+        box.classList.remove("expanded");
+        arrow.classList.remove("rotated");
+    }
+}
+    </script>
 </body>
     
 </html>
