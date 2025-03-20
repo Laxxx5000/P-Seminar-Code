@@ -52,15 +52,18 @@
   color: #333;
   font-weight: 700;
   font-size: 28px;
+  text-decoration: underline 2px;
 }
 
 .card:hover .card__image {
   scale: 0; /* Das Bild verkleinert sich beim Hover */
 }
+
 @font-face{
   font-family: roboto-variable;
     src: url(../fonts/Roboto-Medium.ttf);
 }
+
 .card__description {
   margin: 10px 0 0;
   font-size: 14px;
