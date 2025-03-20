@@ -20,6 +20,7 @@
 @media (max-width: 768px) {
     .card-container {
       grid-template-columns: 1fr;
+      margin: 0 auto;
     }
   }
 
@@ -32,6 +33,12 @@
     font-family: roboto-variable;
     
 }
+@media (max-width: 768px) {
+    .gruss {
+      margin:auto;
+    }
+  }
+
 .over-card-container{
   height: 100vh;
   margin: 0;
