@@ -10,7 +10,7 @@
     float:left;
 }
 @media (max-width: 768px){
-    .big{display: none; margin-left: 0;}
+    .big{display: none;}
     
     
 }
