@@ -34,3 +34,6 @@
         .rotated {
             transform: rotate(180deg);
         }
+        @media (max-width: 768px){
+            .box{margin-left: 5%; width: 90%;}
+        }
