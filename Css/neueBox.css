@@ -29,7 +29,7 @@
             font-size: 18px;
         }
         .expanded {
-            max-height: 10000px;
+            max-height: 1000000px;
         }
         .rotated {
             transform: rotate(180deg);
