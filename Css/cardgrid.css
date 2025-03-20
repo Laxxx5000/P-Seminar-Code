@@ -21,7 +21,7 @@
     .card-container {
       grid-template-columns: 1fr;
       margin:auto;
-      padding-right: 65px;
+      padding-right: 50px;
     }
   }
 
