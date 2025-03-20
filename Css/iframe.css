@@ -11,7 +11,7 @@
 }
 @media (max-width: 768px){
     .big{display: none;}
-    
+    .tbox{float: none;}
     
 }
 @media (min-width: 769px){
