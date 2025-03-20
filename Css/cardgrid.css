@@ -20,7 +20,7 @@
 @media (max-width: 768px) {
     .card-container {
       grid-template-columns: 1fr;
-      margin: 0 auto;
+      margin:auto;
     }
   }
 
@@ -28,14 +28,15 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    height: 10vh;
+    height: 15vh;
     font-size: 28px;
     font-family: roboto-variable;
     
 }
 @media (max-width: 768px) {
     .gruss {
-      margin:auto;
+      margin-left: 5%;
+      margin-bottom: 5px;
     }
   }
 
