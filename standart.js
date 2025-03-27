@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 container.addEventListener('touchend', function () {
                     setTimeout(() => {
                         link.style.pointerEvents = 'auto'; // Link aktivieren
-                    }, 50); // Minimale Verzögerung für sicheres Aktivieren
+                    }, 5000); // Minimale Verzögerung für sicheres Aktivieren
                 }, { once: true }); // touchend nur einmal pro Aktivierung
             });
         });
