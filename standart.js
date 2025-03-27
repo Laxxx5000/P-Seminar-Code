@@ -24,19 +24,20 @@ function setup() { document.getElementById("loading").remove();
 //Am Handy kann man die Buttons in den Cards drücken, obwohl man nicht vorher auf die Card gedrückt/gehovered hat.
 //Das Problem wird mit folgendem -hoffentlich- behoben. Bin zu faul für eine extra Datei.
 function initHoverButtons() {
-    const containers = document.getElementsByClassName('container'); // Alle Container holen
+    const containers = document.getElementsByClassName('card'); // Alle Container holen
     
     for (let container of containers) {
-        const button = container.getElementsByClassName('button')[0]; // Button im aktuellen Container holen
+        const button = container.getElementsByClassName('buttonInCard')[0]; // Button im aktuellen Container holen
 
         if (!button) continue; // Falls kein Button im Container ist, überspringen
 
-        container.addEventListener('mouseenter', () => {
-            button.removeAttribute('disabled'); // Button aktivieren
+        // Touchscreen-Ereignisse
+        container.addEventListener('touchstart', () => {
+            button.removeAttribute('disabled'); // Button aktivieren bei Touch
         });
 
-        container.addEventListener('mouseleave', () => {
-            button.setAttribute('disabled', 'true'); // Button deaktivieren
+        container.addEventListener('touchend', () => {
+            button.setAttribute('disabled', 'true'); // Button deaktivieren, wenn der Touch endet
         });
     }
 }
