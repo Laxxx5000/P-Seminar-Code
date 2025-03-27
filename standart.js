@@ -27,12 +27,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleButtonActivation() {
         const containers = document.querySelectorAll('.card');
-        
-        // Für jedes Container-Element einen Event-Listener hinzufügen
+
+        // Event-Listener für jedes Container-Element
         containers.forEach(container => {
             const button = container.querySelector('.buttonInCard');
             let isDivTouched = false;  // Flag um Touch zu erkennen
 
+            // Aktivieren des Buttons beim Hover über den Container
+            container.addEventListener('mouseenter', function() {
+                button.removeAttribute('disabled');
+                button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
+            });
+
+            // Deaktivieren des Buttons, wenn der Hover endet
+            container.addEventListener('mouseleave', function() {
+                if (!isDivTouched) {
+                    button.setAttribute('disabled', 'true');
+                    button.style.cursor = 'not-allowed';  // Setzt den Cursor auf nicht erlaubt
+                }
+            });
 
             // Aktivieren des Buttons beim Tap auf dem Container (für Touchscreen)
             container.addEventListener('touchstart', function() {
@@ -41,25 +54,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
             });
 
-            // Zurücksetzen des Status, wenn der Benutzer ein anderes Element tippt
-            document.addEventListener('touchstart', function(event) {
-                if (!event.target.closest('.container')) {
-                    button.setAttribute('disabled', 'true');
-                    button.style.cursor = 'not-allowed';  // Setzt den Cursor auf nicht erlaubt
-                    isDivTouched = false;
-                }
-            });
-
-            // Deaktivieren des Buttons, wenn ein anderes Container-Element angeklickt wird
+            // Deaktivieren des Buttons von allen anderen Containern, wenn auf diesen Container geklickt wird
             container.addEventListener('click', function() {
-                // Alle anderen Container deaktivieren ihren Button
+                // Alle Container durchlaufen und den Button deaktivieren, außer den aktuellen
                 containers.forEach(otherContainer => {
+                    const otherButton = otherContainer.querySelector('.buttonInCard');
                     if (otherContainer !== container) {
-                        const otherButton = otherContainer.querySelector('.button');
                         otherButton.setAttribute('disabled', 'true');
                         otherButton.style.cursor = 'not-allowed';  // Setzt den Cursor auf nicht erlaubt
                     }
                 });
+
+                // Den Button des geklickten Containers aktivieren
+                button.removeAttribute('disabled');
+                button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
             });
         });
     }
