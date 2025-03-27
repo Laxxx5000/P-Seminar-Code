@@ -23,61 +23,40 @@ function setup() { document.getElementById("loading").remove();
 
 //Am Handy kann man die Buttons in den Cards drücken, obwohl man nicht vorher auf die Card gedrückt/gehovered hat.
 //Das Problem wird mit folgendem -hoffentlich- behoben. Bin zu faul für eine extra Datei.
-document.addEventListener('DOMContentLoaded', function() {
-
+document.addEventListener('DOMContentLoaded', function () {
     function handleButtonActivation() {
         const containers = document.querySelectorAll('.card');
 
-        // Event-Listener für jedes Container-Element
         containers.forEach(container => {
             const button = container.querySelector('.buttonInCard');
-            const link = container.querySelector('a'); // Das <a>-Tag
-            let isDivTouched = false;  // Flag um Touch zu erkennen
 
-            // Aktivieren des Buttons beim Hover über den Container
-            container.addEventListener('mouseenter', function() {
-                // Den Hover nur aktivieren, wenn der Touch nicht aktiv ist
-                if (!isDivTouched) {
-                    button.removeAttribute('disabled');
-                    button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
-                }
-            });
+            container.addEventListener('touchstart', function (event) {
+                event.preventDefault(); // Verhindert Standard-Touch-Aktionen
+                
+                // Deaktiviere kurzzeitig alle Interaktionen
+                document.body.style.pointerEvents = 'none';
 
-            // Deaktivieren des Buttons, wenn der Hover endet
-            container.addEventListener('mouseleave', function() {
-                if (!isDivTouched) {
-                    button.setAttribute('disabled', 'true');
-                    button.style.cursor = 'not-allowed';  // Setzt den Cursor auf nicht erlaubt
-                }
-            });
-
-            // Aktivieren des Buttons nach dem Ende des Touch-Events
-            container.addEventListener('touchend', function(event) {
-                event.preventDefault();  // Verhindert die Standard-Navigation des Links
-
-                isDivTouched = true; // Markiert, dass ein Touch stattgefunden hat
+                // Aktiviere den Button im aktuellen Container
                 button.removeAttribute('disabled');
-                button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
+                button.style.cursor = 'pointer';
+
+                // Nach 300ms alles wieder aktivieren
+                setTimeout(() => {
+                    document.body.style.pointerEvents = 'auto';
+                }, 300);
             });
 
-            // Deaktivieren des Buttons von allen anderen Containern, wenn auf diesen Container geklickt wird
-            container.addEventListener('click', function(event) {
-                // Alle Container durchlaufen und den Button deaktivieren, außer den aktuellen
-                containers.forEach(otherContainer => {
-                    const otherButton = otherContainer.querySelector('.buttonInCard');
-                    if (otherContainer !== container) {
-                        otherButton.setAttribute('disabled', 'true');
-                        otherButton.style.cursor = 'not-allowed';  // Setzt den Cursor auf nicht erlaubt
-                    }
-                });
-
-                // Den Button des geklickten Containers aktivieren
+            container.addEventListener('mouseenter', function () {
                 button.removeAttribute('disabled');
-                button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
+                button.style.cursor = 'pointer';
+            });
+
+            container.addEventListener('mouseleave', function () {
+                button.setAttribute('disabled', 'true');
+                button.style.cursor = 'not-allowed';
             });
         });
     }
 
-    // Funktion aufrufen, wenn die Seite geladen ist
     handleButtonActivation();
 });
