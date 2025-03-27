@@ -34,18 +34,18 @@ document.addEventListener('DOMContentLoaded', function () {
             link.style.pointerEvents = 'none';
 
             container.addEventListener('touchstart', function (event) {
-                event.preventDefault(); // Standardverhalten verhindern
+                event.preventDefault(); // Verhindert unerwartete Touch-Events
 
-                // Deaktiviere alle Links auf der Seite
+                // Alle Links auf der Seite deaktivieren
                 document.querySelectorAll('.container a').forEach(a => {
                     a.style.pointerEvents = 'none';
                 });
 
-                // Aktiviere den Link erst nach `touchend`
+                // Warten bis Finger gehoben wurde (touchend)
                 container.addEventListener('touchend', function () {
                     setTimeout(() => {
                         link.style.pointerEvents = 'auto'; // Link aktivieren
-                    }, 300); // Kurze Verzögerung, um versehentliche Klicks zu vermeiden
+                    }, 50); // Minimale Verzögerung für sicheres Aktivieren
                 }, { once: true }); // touchend nur einmal pro Aktivierung
             });
         });
@@ -53,3 +53,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     handleButtonActivation();
 });
+
