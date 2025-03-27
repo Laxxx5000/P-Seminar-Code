@@ -35,8 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Aktivieren des Buttons beim Hover über den Container
             container.addEventListener('mouseenter', function() {
-                button.removeAttribute('disabled');
-                button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
+                // Den Hover nur aktivieren, wenn der Touch nicht aktiv ist
+                if (!isDivTouched) {
+                    button.removeAttribute('disabled');
+                    button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
+                }
             });
 
             // Deaktivieren des Buttons, wenn der Hover endet
@@ -47,12 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 
-            // Aktivieren des Buttons beim Tap auf dem Container (für Touchscreen)
-            container.addEventListener('touchstart', function() {
-                setTimeout(function() {
-                    button.removeAttribute('disabled');
-                    button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
-                }, 2000);  // 2 Sekunden Pause, (etwas lang, aber vielleicht geht es dann)
+            // Aktivieren des Buttons nach dem Ende des Touch-Events
+            container.addEventListener('touchend', function() {
+                isDivTouched = true; // Markiert, dass ein Touch stattgefunden hat
+                button.removeAttribute('disabled');
+                button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
             });
 
             // Deaktivieren des Buttons von allen anderen Containern, wenn auf diesen Container geklickt wird
@@ -67,10 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 // Den Button des geklickten Containers aktivieren
-                setTimeout(function() {
-                    button.removeAttribute('disabled');
-                    button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
-                }, 2000);  // 2 Sekunden Pause, (etwas lang, aber vielleicht geht es dann)
+                button.removeAttribute('disabled');
+                button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
             });
         });
     }
