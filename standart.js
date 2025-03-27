@@ -25,7 +25,7 @@ function setup() { document.getElementById("loading").remove();
 //Das Problem wird mit folgendem -hoffentlich- behoben. Bin zu faul für eine extra Datei.
 document.addEventListener('DOMContentLoaded', function () {
     function handleButtonActivation() {
-        const containers = document.querySelectorAll('.card');
+        const containers = document.querySelectorAll('.container');
 
         containers.forEach(container => {
             const link = container.querySelector('a'); // Der Link um den Button
@@ -36,16 +36,16 @@ document.addEventListener('DOMContentLoaded', function () {
             container.addEventListener('touchstart', function (event) {
                 event.preventDefault(); // Standardverhalten verhindern
 
-                // Zuerst alle Links deaktivieren
-                document.querySelectorAll('.card a').forEach(a => {
+                // Deaktiviere alle Links auf der Seite
+                document.querySelectorAll('.container a').forEach(a => {
                     a.style.pointerEvents = 'none';
                 });
 
-                // Aktivierung erst nach touchend!
+                // Aktiviere den Link erst nach `touchend`
                 container.addEventListener('touchend', function () {
                     setTimeout(() => {
                         link.style.pointerEvents = 'auto'; // Link aktivieren
-                    }, 100);
+                    }, 300); // Kurze Verzögerung, um versehentliche Klicks zu vermeiden
                 }, { once: true }); // touchend nur einmal pro Aktivierung
             });
         });
