@@ -72,3 +72,23 @@
   line-height: 1.4;
   font-weight: bold;
 }
+
+/*button in der Karte*/
+.buttonInCard {
+  border: none;
+  outline: none;
+  background-color: #333;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 850;
+  color: #F3B47C;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px #666;
+  margin-top: 3px;
+}
+
+.buttonInCard:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #777;
+}
