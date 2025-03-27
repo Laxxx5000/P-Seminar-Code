@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Nach Touch-Ende den Link sichtbar machen
                 container.addEventListener('touchend', function () {
-                    setTimeout(() => {
-                        link.style.display = 'block'; // Link wird erst nach 500ms sichtbar
-                    }, 500); // Kleine Verzögerung für sicheres Aktivieren
+                    
+                    link.style.display = 'block'; // Link wird erst nach 500ms sichtbar
+
                 }, { once: true });
             });
         });
