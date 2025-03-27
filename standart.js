@@ -28,29 +28,28 @@ document.addEventListener('DOMContentLoaded', function () {
         const containers = document.querySelectorAll('.card');
 
         containers.forEach(container => {
-            const link = container.querySelector('a'); // Der Link um den Button
+            const link = container.querySelector('a'); // Der Link im Container
 
-            // Anfangs alle Links deaktivieren
-            link.style.pointerEvents = 'none';
+            // Anfangs alle Links unsichtbar machen
+            link.style.display = 'none';
 
             container.addEventListener('touchstart', function (event) {
-                event.preventDefault(); // Verhindert unerwartete Touch-Events
+                event.preventDefault(); // Verhindert unerwünschte Klicks oder Scrollen
 
-                // Alle Links auf der Seite deaktivieren
-                document.querySelectorAll('.card a').forEach(a => {
-                    a.style.pointerEvents = 'none';
+                // Alle Links auf der Seite verstecken
+                document.querySelectorAll('.container a').forEach(a => {
+                    a.style.display = 'none';
                 });
 
-                // Warten bis Finger gehoben wurde (touchend)
+                // Nach Touch-Ende den Link sichtbar machen
                 container.addEventListener('touchend', function () {
                     setTimeout(() => {
-                        link.style.pointerEvents = 'auto'; // Link aktivieren
-                    }, 5000); // Minimale Verzögerung für sicheres Aktivieren
-                }, { once: true }); // touchend nur einmal pro Aktivierung
+                        link.style.display = 'block'; // Link wird erst nach 500ms sichtbar
+                    }, 500); // Kleine Verzögerung für sicheres Aktivieren
+                }, { once: true });
             });
         });
     }
 
     handleButtonActivation();
 });
-
