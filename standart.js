@@ -24,8 +24,8 @@ function setup() { document.getElementById("loading").remove();
 //Am Handy kann man die Buttons in den Cards drücken, obwohl man nicht vorher auf die Card gedrückt/gehovered hat.
 //Das Problem wird mit folgendem -hoffentlich- behoben. Bin zu faul für eine extra Datei.
 function initHoverButton() {
-    const container = document.getElementById('card');
-    const button = document.getElementById('buttoninCard');
+    const container = document.getElementsByClassName('card');
+    const button = document.getElementsByClassName('buttoninCard');
 
     if (!container || !button) return;
 
