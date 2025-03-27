@@ -20,3 +20,23 @@ function handleOutsideClick(event) {
 
 function setup() { document.getElementById("loading").remove();
 }
+
+//Am Handy kann man die Buttons in den Cards drücken, obwohl man nicht vorher auf die Card gedrückt/gehovered hat.
+//Das Problem wird mit folgendem -hoffentlich- behoben. Bin zu faul für eine extra Datei.
+function initHoverButton() {
+    const container = document.getElementById('card');
+    const button = document.getElementById('buttoninCard');
+
+    if (!container || !button) return;
+
+    container.addEventListener('mouseenter', () => {
+        button.removeAttribute('disabled');
+    });
+
+    container.addEventListener('mouseleave', () => {
+        button.setAttribute('disabled', 'true');
+    });
+}
+
+// Funktion nach dem Laden der Seite aufrufen
+document.addEventListener('DOMContentLoaded', initHoverButton);
