@@ -22,34 +22,20 @@ function setup() { document.getElementById("loading").remove();
 }
 
 //Am Handy kann man die Buttons in den Cards drücken, obwohl man nicht vorher auf die Card gedrückt/gehovered hat.
-//Das Problem wird mit folgendem -hoffentlich- behoben. Bin zu faul für eine extra Datei.
-document.addEventListener('DOMContentLoaded', function () {
-    function handleButtonActivation() {
-        const containers = document.querySelectorAll('.card');
-
-        containers.forEach(container => {
-            const link = container.querySelector('a'); // Der Link im Container
-
-            // Anfangs alle Links unsichtbar machen
-            link.style.display = 'none';
-
-            container.addEventListener('touchstart', function (event) {
-                event.preventDefault(); // Verhindert unerwünschte Klicks oder Scrollen
-
-                // Alle Links auf der Seite verstecken
-                document.querySelectorAll('.container a').forEach(a => {
-                    a.style.display = 'none';
-                });
-
-                // Nach Touch-Ende den Link sichtbar machen
-                container.addEventListener('touchend', function () {
-                    
-                    link.style.display = 'block'; // Link wird erst nach 500ms sichtbar
-
-                }, { once: true });
-            });
-        });
-    }
-
-    handleButtonActivation();
-});
+//Das Problem wird mit folgendem -hoffentlich- behoben. Bin zu faul für eine extra Java-Script-Datei.
+document.querySelectorAll('.box').forEach(box => {
+    const button = box.querySelector('button');
+  
+    box.addEventListener('transitionend', function (event) {
+      if (event.propertyName === 'transform') {
+        if (box.matches(':hover')) {
+          console.log('Transition abgeschlossen. Button aktiv!');
+          button.disabled = false;
+        } else {
+          console.log('Transition zurückgesetzt. Button deaktiviert!');
+          button.disabled = true;
+        }
+      }
+    });
+  });
+  
