@@ -28,21 +28,22 @@ document.addEventListener('DOMContentLoaded', function () {
         const containers = document.querySelectorAll('.card');
 
         containers.forEach(container => {
-            const button = container.querySelector('.buttonInCard');
+            const link = container.querySelector('a'); // Der Link um den Button
+
+            // Anfangs alle Links deaktivieren
+            link.style.pointerEvents = 'none';
+
             container.addEventListener('touchstart', function (event) {
-                event.preventDefault(); // Standard-Touch-Aktionen verhindern
-                
-                // Blockiere nur Klicks, aber nicht CSS-Animationen
-                document.body.style.userSelect = 'none'; // Kein Text markieren
-                document.body.style.pointerEvents = 'auto'; // Animationen bleiben aktiv
+                event.preventDefault(); // Standardverhalten verhindern
 
-                // Aktiviere den Button im aktuellen Container
-                button.removeAttribute('disabled');
-                button.style.cursor = 'pointer';
+                // Zuerst alle Links auf der Seite deaktivieren
+                document.querySelectorAll('.card a').forEach(a => {
+                    a.style.pointerEvents = 'none';
+                });
 
-                // Nach 300ms Klicks wieder aktivieren
+                // Dann nur den Link im aktuellen Container aktivieren
                 setTimeout(() => {
-                    document.body.style.userSelect = 'auto';
+                    link.style.pointerEvents = 'auto';
                 }, 300);
             });
         });
