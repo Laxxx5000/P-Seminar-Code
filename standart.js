@@ -25,7 +25,7 @@ function setup() { document.getElementById("loading").remove();
 //Das Problem wird mit folgendem -hoffentlich- behoben. Bin zu faul für eine extra Datei.
 document.addEventListener('DOMContentLoaded', function () {
     function handleButtonActivation() {
-        const containers = document.querySelectorAll('.container');
+        const containers = document.querySelectorAll('.card');
 
         containers.forEach(container => {
             const link = container.querySelector('a'); // Der Link um den Button
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.preventDefault(); // Verhindert unerwartete Touch-Events
 
                 // Alle Links auf der Seite deaktivieren
-                document.querySelectorAll('.container a').forEach(a => {
+                document.querySelectorAll('.card a').forEach(a => {
                     a.style.pointerEvents = 'none';
                 });
 
