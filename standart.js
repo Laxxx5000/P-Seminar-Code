@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Event-Listener für jedes Container-Element
         containers.forEach(container => {
             const button = container.querySelector('.buttonInCard');
+            const link = container.querySelector('a'); // Das <a>-Tag
             let isDivTouched = false;  // Flag um Touch zu erkennen
 
             // Aktivieren des Buttons beim Hover über den Container
@@ -51,14 +52,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             // Aktivieren des Buttons nach dem Ende des Touch-Events
-            container.addEventListener('touchend', function() {
+            container.addEventListener('touchend', function(event) {
+                event.preventDefault();  // Verhindert die Standard-Navigation des Links
+
                 isDivTouched = true; // Markiert, dass ein Touch stattgefunden hat
                 button.removeAttribute('disabled');
                 button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
             });
 
             // Deaktivieren des Buttons von allen anderen Containern, wenn auf diesen Container geklickt wird
-            container.addEventListener('click', function() {
+            container.addEventListener('click', function(event) {
                 // Alle Container durchlaufen und den Button deaktivieren, außer den aktuellen
                 containers.forEach(otherContainer => {
                     const otherButton = otherContainer.querySelector('.buttonInCard');
