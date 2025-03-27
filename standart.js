@@ -26,30 +26,41 @@ function setup() { document.getElementById("loading").remove();
 document.addEventListener('DOMContentLoaded', function() {
 
     function handleButtonActivation() {
-        const container = document.querySelector('.container');
-        const button = container.querySelector('.button');
+        const containers = document.querySelectorAll('.card');
+        
+        // Für jedes Container-Element einen Event-Listener hinzufügen
+        containers.forEach(container => {
+            const button = container.querySelector('.buttonInCard');
+            let isDivTouched = false;  // Flag um Touch zu erkennen
 
-        let isDivTouched = false;  // Flag um Touch zu erkennen
 
-        // Aktivieren des Buttons beim Tap auf dem Container (für Touchscreen)
-        container.addEventListener('touchstart', function() {
-            isDivTouched = true;
-            button.removeAttribute('disabled');
-            button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
-        });
+            // Aktivieren des Buttons beim Tap auf dem Container (für Touchscreen)
+            container.addEventListener('touchstart', function() {
+                isDivTouched = true;
+                button.removeAttribute('disabled');
+                button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
+            });
 
-        // Wenn der Button auf Touchscreen gedrückt wird
-        button.addEventListener('touchstart', function() {
-            alert('Button funktioniert jetzt!');
-        });
+            // Zurücksetzen des Status, wenn der Benutzer ein anderes Element tippt
+            document.addEventListener('touchstart', function(event) {
+                if (!event.target.closest('.container')) {
+                    button.setAttribute('disabled', 'true');
+                    button.style.cursor = 'not-allowed';  // Setzt den Cursor auf nicht erlaubt
+                    isDivTouched = false;
+                }
+            });
 
-        // Zurücksetzen des Status, wenn der Benutzer ein anderes Element tippt
-        document.addEventListener('touchstart', function(event) {
-            if (!event.target.closest('.container')) {
-                button.setAttribute('disabled', 'true');
-                button.style.cursor = 'not-allowed';  // Setzt den Cursor auf nicht erlaubt
-                isDivTouched = false;
-            }
+            // Deaktivieren des Buttons, wenn ein anderes Container-Element angeklickt wird
+            container.addEventListener('click', function() {
+                // Alle anderen Container deaktivieren ihren Button
+                containers.forEach(otherContainer => {
+                    if (otherContainer !== container) {
+                        const otherButton = otherContainer.querySelector('.button');
+                        otherButton.setAttribute('disabled', 'true');
+                        otherButton.style.cursor = 'not-allowed';  // Setzt den Cursor auf nicht erlaubt
+                    }
+                });
+            });
         });
     }
 
