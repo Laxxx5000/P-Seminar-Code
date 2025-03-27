@@ -23,7 +23,7 @@ function setup() { document.getElementById("loading").remove();
 
 //Am Handy kann man die Buttons in den Cards drücken, obwohl man nicht vorher auf die Card gedrückt/gehovered hat.
 //Das Problem wird mit folgendem -hoffentlich- behoben. Bin zu faul für eine extra Java-Script-Datei.
-document.querySelectorAll('.box').forEach(box => {
+document.querySelectorAll('.card').forEach(box => {
     const button = box.querySelector('button');
   
     box.addEventListener('transitionend', function (event) {
