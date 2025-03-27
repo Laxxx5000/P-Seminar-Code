@@ -29,31 +29,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         containers.forEach(container => {
             const button = container.querySelector('.buttonInCard');
-
             container.addEventListener('touchstart', function (event) {
-                event.preventDefault(); // Verhindert Standard-Touch-Aktionen
+                event.preventDefault(); // Standard-Touch-Aktionen verhindern
                 
-                // Deaktiviere kurzzeitig alle Interaktionen
-                document.body.style.pointerEvents = 'none';
+                // Blockiere nur Klicks, aber nicht CSS-Animationen
+                document.body.style.userSelect = 'none'; // Kein Text markieren
+                document.body.style.pointerEvents = 'auto'; // Animationen bleiben aktiv
 
                 // Aktiviere den Button im aktuellen Container
                 button.removeAttribute('disabled');
                 button.style.cursor = 'pointer';
 
-                // Nach 300ms alles wieder aktivieren
+                // Nach 300ms Klicks wieder aktivieren
                 setTimeout(() => {
-                    document.body.style.pointerEvents = 'auto';
+                    document.body.style.userSelect = 'auto';
                 }, 300);
-            });
-
-            container.addEventListener('mouseenter', function () {
-                button.removeAttribute('disabled');
-                button.style.cursor = 'pointer';
-            });
-
-            container.addEventListener('mouseleave', function () {
-                button.setAttribute('disabled', 'true');
-                button.style.cursor = 'not-allowed';
             });
         });
     }
