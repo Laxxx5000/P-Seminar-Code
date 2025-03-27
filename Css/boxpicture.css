@@ -87,6 +87,9 @@
   box-shadow: 0px 5px 0px 0px #666;
   margin-top: 3px;
 }
+.card:hover .buttonInCard {
+  cursor: pointer;
+}
 
 .buttonInCard:active {
   transform: translateY(5px);
