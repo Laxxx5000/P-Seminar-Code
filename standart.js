@@ -49,9 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Aktivieren des Buttons beim Tap auf dem Container (für Touchscreen)
             container.addEventListener('touchstart', function() {
-                isDivTouched = true;
-                button.removeAttribute('disabled');
-                button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
+                setTimeout(function() {
+                    button.removeAttribute('disabled');
+                    button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
+                }, 500);  // 500 Millisekunden Pause, (ist eine Theorie, warum es nicht geht)
             });
 
             // Deaktivieren des Buttons von allen anderen Containern, wenn auf diesen Container geklickt wird
@@ -66,8 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 // Den Button des geklickten Containers aktivieren
-                button.removeAttribute('disabled');
-                button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
+                setTimeout(function() {
+                    button.removeAttribute('disabled');
+                    button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
+                }, 500);  // 500 Millisekunden Pause, (ist eine Theorie, warum es nicht geht)
             });
         });
     }
