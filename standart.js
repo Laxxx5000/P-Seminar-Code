@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(function() {
                     button.removeAttribute('disabled');
                     button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
-                }, 500);  // 500 Millisekunden Pause, (ist eine Theorie, warum es nicht geht)
+                }, 2000);  // 2 Sekunden Pause, (etwas lang, aber vielleicht geht es dann)
             });
 
             // Deaktivieren des Buttons von allen anderen Containern, wenn auf diesen Container geklickt wird
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(function() {
                     button.removeAttribute('disabled');
                     button.style.cursor = 'pointer';  // Setzt den Hand-Cursor
-                }, 500);  // 500 Millisekunden Pause, (ist eine Theorie, warum es nicht geht)
+                }, 2000);  // 2 Sekunden Pause, (etwas lang, aber vielleicht geht es dann)
             });
         });
     }
