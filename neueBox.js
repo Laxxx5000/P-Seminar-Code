@@ -43,3 +43,18 @@ function toggleBox3() {
         arrow.classList.remove("rotated");
     }
 }
+function toggleBox4() {
+    const box = document.getElementById("toggleBox4");
+    const content = document.getElementById("content4");
+    const arrow = document.getElementById("arrow4");
+    
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        box.classList.add("expanded");
+        arrow.classList.add("rotated");
+    } else {
+        content.style.display = "none";
+        box.classList.remove("expanded");
+        arrow.classList.remove("rotated");
+    }
+}
