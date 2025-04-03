@@ -34,4 +34,6 @@ main{
     margin-top: 2vh;
     font-size: 22px;
     font-family: roboto-variable;
+    padding-left: 5%;
+    padding-right: 5%;
 }
