@@ -36,4 +36,13 @@ main{
     font-family: roboto-variable;
     padding-left: 5%;
     padding-right: 5%;
+    line-height: 1.4;
+}
+.beschreibungstext{
+    line-height: 1.7;
+    padding-top: 20px;
+    font-family: roboto-variable;
+}
+.datenZuGeschaeften{
+    font-size: large;
 }
