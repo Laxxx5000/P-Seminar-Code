@@ -20,3 +20,17 @@ main{
 #langeslorem{
     line-height: 1.5;
 }
+
+
+.Überschrift{
+    display: flex;
+    justify-content: center;
+}
+
+.Anfangstext{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    font-size: 22px;
+    font-family: roboto-variable;
+}
