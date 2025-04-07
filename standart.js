@@ -21,3 +21,27 @@ function handleOutsideClick(event) {
 function setup() { document.getElementById("loading").remove();
 }
 
+function goToRandomPage() {
+    // Liste deiner Subpages
+    const subpages = [
+      'Essen/asia.html',
+      'Essen/bavarian.html',
+      'Essen/imbiss.html',
+      'Essen/italian.html',
+      'Freizeit und Kultur/culture.html',
+      'Freizeit und Kultur/freizeit.html',
+      'Shopping/clothing.html',
+      'Shopping/creative.html',
+      'Shopping/drugs.html',
+      'Shopping/sanity.html',
+        'about.html'
+    ];
+  
+    // Wähle eine zufällige Seite
+    const randomIndex = Math.floor(Math.random() * subpages.length);
+    const selectedPage = subpages[randomIndex];
+  
+    // Weiterleitung
+    window.location.href = selectedPage;
+  }
+  

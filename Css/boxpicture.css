@@ -53,6 +53,7 @@
   font-weight: 700;
   font-size: 28px;
   text-decoration: underline 2px;
+  cursor: pointer;
 }
 
 .card:hover .card__image {
