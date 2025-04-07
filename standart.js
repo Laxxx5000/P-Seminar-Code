@@ -33,8 +33,7 @@ function goToRandomPage() {
       'Shopping/clothing.html',
       'Shopping/creative.html',
       'Shopping/drugs.html',
-      'Shopping/sanity.html',
-        'about.html'
+      'Shopping/sanity.html'
     ];
   
     // Wähle eine zufällige Seite
