@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - HokiGuide</title>
+    <link rel="icon" href="../Bilder/testlogo.png">
+    <link rel="stylesheet" href="../Css/stylebasic.css">
+    <link rel="stylesheet" href="../Css/sidebar.css">
+    <link rel="stylesheet" href="../Css/magicbox.css">
+    <link rel="stylesheet" href="../Css/boxpicture.css">
+    <link rel="stylesheet" href="../Css/cardgrid.css">
+    <link rel="stylesheet" href="../Css/languageswitcher.css">
+    <link rel="stylesheet" href="../Css/iframe.css">
+    <link rel="stylesheet" href="../Css/neueBox.css">
+</head>
+<body>
+        <header class="top-bar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+            ☰
+        </div>
+        
+        <div class="site-name"><a href="../index.html" style="color: #F3B47C;text-decoration: none;"> Hoki-Guide</a></div>
+
+        <button class="language-element" id="de">
+            <span class="language-element-de" id="de-links">DE</span> 
+            <span class="enZumWählen" id="de-rechts" >EN</span> 
+        </button>
+        <button class="language-element" id="en">
+            <span class="language-element-de" id="en-links">DE</span> 
+            <span class="enZumWählen" id="en-rechts">EN</span> 
+        </button>
+        
+    </header>
+    
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="javascript:history.back()"><-</a></li>
+            <li><a href="../index.html">Startseite</a></li>
+            <li><a href="../emptypage.html">Guide-Start</a></li>
+            <li><a href="../emptypage.html">Leere Seite 7491</a></li>
+            <li><a href="../about.html">Über uns</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="box" id="toggleBox">
+            <div class="box-header"  onclick="toggleBox()">
+                <span>Zum Oberbräu Holzkirchen</span>
+                <span class="arrow" id="arrow">&#9660;</span>
+            </div>
+            <div class="content" id="content">
+                <div class="datenZuGeschaeften">
+                <p><b>Adresse:</b> Marktplatz 18, 83607 Markt Holzkirchen</p>
+                <p><b>Telefonnummer:</b> 080249009242</p>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5352.115371984673!2d11.69619689439648!3d47.877210369251216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ded078a56067d%3A0x20bf09eea9eb9e64!2sZum%20Oberbr%C3%A4u!5e0!3m2!1sde!2sde!4v1744280368995!5m2!1sde!2sde" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="iframe tbox big"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5352.115371984673!2d11.69619689439648!3d47.877210369251216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ded078a56067d%3A0x20bf09eea9eb9e64!2sZum%20Oberbr%C3%A4u!5e0!3m2!1sde!2sde!4v1744280368995!5m2!1sde!2sde" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="iframe tbox small"></iframe>
+                <p class="beschreibungstext">Genießen Sie deutsche Spezialitäten in unserem charmanten Restaurant, das in romantischer Lage für gemütliche Momente sorgt. In unserem Außenbereich können Sie den Sommer in vollen Zügen genießen. Wir bieten eine breite Auswahl an leckeren Gerichten, von herzhaften Speisen bis zu frischen Salaten, sowie köstliche Desserts wie Eiscreme und Pfannkuchen. Vegetarische Optionen und gesunde Gerichte gehören ebenfalls zu unserem Angebot. Besuchen Sie uns zum Mittag- oder Abendessen und lassen Sie sich verwöhnen! </p>
+                
+                <a href="https://zum-oberbraeu-holzkirchen.eatbu.com/?lang=de#" target="_blank">
+                    <button class="buttonOutCard" >Zur Webseite</button>
+                </a>
+            </div>
+        </div>
+    
+    </main>
+
+    <script src="../standart.js"></script>
+    <script src="../neueBox.js"></script>
+</body>
+    
+</html>

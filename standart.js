@@ -25,7 +25,8 @@ function goToRandomPage() {
     // Liste deiner Subpages
     const subpages = [
       'Essen/asia.html',
-      'Essen/bavarian.html',
+      'Essen/backer.html',
+      'Essen/bayres.html',
       'Essen/imbiss.html',
       'Essen/italian.html',
       'Freizeit und Kultur/culture.html',
