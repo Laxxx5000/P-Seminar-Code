@@ -58,3 +58,18 @@ function toggleBox4() {
         arrow.classList.remove("rotated");
     }
 }
+function toggleBox5() {
+    const box = document.getElementById("toggleBox5");
+    const content = document.getElementById("content5");
+    const arrow = document.getElementById("arrow5");
+    
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        box.classList.add("expanded");
+        arrow.classList.add("rotated");
+    } else {
+        content.style.display = "none";
+        box.classList.remove("expanded");
+        arrow.classList.remove("rotated");
+    }
+}
