@@ -22,6 +22,7 @@
         .arrow {
             transition: transform 0.3s ease-out;
             cursor: pointer;
+            user-select: none;
         }
         .content {
             padding: 15px;
