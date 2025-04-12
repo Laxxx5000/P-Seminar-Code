@@ -92,3 +92,45 @@
     
     background-color: #333;
 }
+
+
+
+#backwards{
+   padding: 20px;
+   background-color: #F3B47C;
+   border-radius: 30px;
+   position: relative;
+   top: 700px;
+   left: 10px;
+   height: 10px;
+}
+
+.material-symbols-outlined {
+   padding: 20px;
+   padding-left: 24px;
+   background-color: #F3B47C;
+   color: #222;
+   margin: 5px;
+   border-radius: 23px;
+   font-variation-settings:
+     'FILL' 0,
+     'wght' 4000,
+     'GRAD' 0,
+     'opsz' 24;
+   position: fixed;
+   bottom: 20px;
+   left: 20px;
+   z-index: 1000;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+   box-shadow: 0 6px 0px 0px #a1734a;
+}
+
+.material-symbols-outlined:hover {
+   transform: scale(1);
+   transform: translateY(2px);
+   box-shadow: 0 4px 0 0 #a1734a;
+}
+.material-symbols-outlined:active {
+   transform: translateY(5px);
+   box-shadow: 0px 0px 0px 0px #a1734a;
+ }
