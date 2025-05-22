@@ -24,18 +24,18 @@ function setup() { document.getElementById("loading").remove();
 function goToRandomPage() {
     // Liste deiner Subpages
     const subpages = [
-      'Essen/asia.html',
-      'Essen/backer.html',
-      'Essen/bayres.html',
-      'Essen/doener.html',
-      'Essen/coffee.html',
-      'Essen/italian.html',
+      'Essen/de/asia(de).html',
+      'Essen/de/backer(de).html',
+      'Essen/de/bayres(de).html',
+      'Essen/de/doener(de).html',
+      'Essen/de/coffee(de).html',
+      'Essen/de/italian(de).html',
       'Freizeit und Kultur/culture.html',
       'Freizeit und Kultur/freizeit.html',
       'Shopping/clothing.html',
       'Shopping/creative.html',
       'Shopping/drugs.html',
-      'Shopping/sanity.html'
+      'Shopping/HEP.html'
     ];
   
     // Wähle eine zufällige Seite
