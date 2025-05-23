@@ -103,6 +103,6 @@ main{
 }
 
 @media (max-width:768px) {
-    .slider{max-height: 200px;max-width: 300px;padding-bottom: 5px;}
+    .slider{max-height: 200px;max-width: 300px;margin-bottom: 7px;}
 
 }
