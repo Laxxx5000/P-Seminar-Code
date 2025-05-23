@@ -76,7 +76,7 @@ main{
   width: 600px;
   height: 400px;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 13px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   position: relative;
   margin-left: auto;
@@ -103,6 +103,6 @@ main{
 }
 
 @media (max-width:768px) {
-    .slider{max-height: 200px;max-width: 300px;}
+    .slider{max-height: 200px;max-width: 300px;padding-bottom: 5px;}
 
 }
