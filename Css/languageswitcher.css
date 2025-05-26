@@ -1,8 +1,3 @@
-   
-#en{
-      display: none;
-}
-   
 .language-element {
    display: flex;
    width: 80px; /* Feste Breite für Konsistenz */
