@@ -26,13 +26,7 @@
    justify-content: center;
 }
 
-.enZumWählen {
-   border-top-right-radius: 5px; 
-   border-bottom-right-radius: 5px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
+//
 
 #de-links{
    background-color: #F3B47C;
