@@ -26,6 +26,10 @@
    justify-content: center;
 }
 
+.enZumWählen{
+   border-top-right-radius: 5px;
+   border-bottom-right-radius:5px;
+}
 
 
 #de-links{
