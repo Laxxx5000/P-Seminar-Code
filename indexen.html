@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - HokiGuide</title>
+    <link rel="icon" href="Bilder/testlogo.png">
+    <link rel="stylesheet" href="Css/stylebasic.css">
+    <link rel="stylesheet" href="Css/sidebar.css">
+    <link rel="stylesheet" href="Css/magicbox.css">
+    <link rel="stylesheet" href="Css/boxpicture.css">
+    <link rel="stylesheet" href="Css/cardgrid.css">
+    <link rel="stylesheet" href="Css/languageswitcher.css">
+</head>
+<body>
+        <header class="top-bar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+            ☰
+        </div>
+        
+        <div class="site-name"><a href="index.html" style="color: #F3B47C;text-decoration: none;"> Hoki-Guide</a></div>
+        
+        <a href="index.html" style="text-decoration: none;">
+            <button class="language-element" id="en">
+                <span class="language-element-de" id="en-links">DE</span> 
+                <span class="enZumWählen" id="en-rechts">EN</span> 
+            </button>
+        </a>
+        
+    </header>
+    
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="emptypage.html">Guide-Start</a></li>
+            <li><a href="emptypage.html">Leere Seite 7491</a></li>
+            <li><a href="atom.html">Atomkraftwerk</a></li>
+            <li><a href="about.html">Über uns</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="gruss" >
+            <p id="grusstext"></p>
+        </div>
+
+            <div class="card-container">
+                
+                
+                <div class="card">
+                    <img src="Bilder/index/32.8mi Essen.png" alt="Card Image" class="card__image">
+                    <div class="card__content">
+                        <p class="card__title">ESSEN</p>
+                        <p class="card__description">In Holzkirchen gibt es einige Restaurants, die einen Besuch Wert sind.</p>
+                        
+                        <a href="Essen/de/essen(de).html">
+                            <button class="buttonInCard" >Bring mich hin!</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Bilder/index/32.5mi Shopping.png" alt="Card Image" class="card__image">
+                    <div class="card__content">
+                        <p class="card__title">EINKAUFEN</p>
+                        <p class="card__description">Tauche ein in das vielseitige Shopping-Angebot Holzkirchens!</p>
+                        
+                        <a href="Shopping/shopping.html">
+                            <button class="buttonInCard" >Bring mich hin!</button>
+                            </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Bilder/index/32.4mi Freizeit und Kultur.png" alt="Card Image" class="card__image">
+                    <div class="card__content">
+                        <p class="card__title">FREIZEIT & KULTUR</p>
+                        <p class="card__description">Ob Natur, Sport oder Entspannung – Holzkirchen bietet unzählige Möglichkeiten für Deine Freizeitgestaltung!</p>
+                        
+                        <a href="Freizeit und Kultur/culture.html">
+                            <button class="buttonInCard" >Bring mich hin!</button>
+                            </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Bilder/index/32.1 mi überasch mich.png" alt="Card Image" class="card__image">
+                    <div class="card__content">
+                        <p class="card__title">ÜBERRASCH MICH!</p>
+                        <p class="card__description">Du weißt noch nicht was du vorhast oder willst einfach auf neue Ideen kommen?</p>
+                
+                        <button class="buttonInCard" onclick="goToRandomPage()">Bring mich hin!</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+    </main>
+
+    <script src="standart.js"></script>
+    <script>
+        const texte = [
+            "Hallo! Wie sieht Dein Tag heute aus?",
+            "Guten Tag! Worauf hast Du heute Lust?",
+            "Hey! Welche Pläne hast Du für heute?",
+            "Willkommen! Was steht heute auf Deinem Programm?",
+            "Schön, Dich hier zu sehen! Was möchtest Du heute unternehmen?",
+            "Guten Tag! Zeit für ein neues Abenteuer?",
+            "Hallo! Lust, etwas Neues in Holzkirchen zu entdecken?",
+            "Hey! Wie kann Dein Tag heute noch besser werden?",
+            "Willkommen in Holzkirchen! Wie gestaltest Du Deinen Tag?",
+            "Guten Tag! Bereit für eine unvergessliche Zeit?",
+            "Hallo! Wie sieht Dein Tag heute aus?",
+            "Guten Tag! Worauf hast Du heute Lust?",
+            "Hey! Welche Pläne hast Du für heute?",
+            "Willkommen! Was steht heute auf Deinem Programm?",
+            "Schön, Dich hier zu sehen! Was möchtest Du heute unternehmen?",
+            "Guten Tag! Zeit für ein neues Abenteuer?",
+            "Hallo! Lust, etwas Neues in Holzkirchen zu entdecken?",
+            "Hey! Wie kann Dein Tag heute noch besser werden?",
+            "Willkommen in Holzkirchen! Wie gestaltest Du Deinen Tag?",
+            "Guten Tag! Bereit für eine unvergessliche Zeit?",
+            "*Insert easteregg message here*"
+        ];
+        
+        document.getElementById("grusstext").innerText = texte[Math.floor(Math.random() * texte.length)];
+    </script>
+</body>
+    
+</html>
