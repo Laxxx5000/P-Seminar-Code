@@ -73,3 +73,18 @@ function toggleBox5() {
         arrow.classList.remove("rotated");
     }
 }
+function toggleBox6() {
+    const box = document.getElementById("toggleBox6");
+    const content = document.getElementById("content6");
+    const arrow = document.getElementById("arrow6");
+    
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        box.classList.add("expanded");
+        arrow.classList.add("rotated");
+    } else {
+        content.style.display = "none";
+        box.classList.remove("expanded");
+        arrow.classList.remove("rotated");
+    }
+}
