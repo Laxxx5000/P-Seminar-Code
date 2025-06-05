@@ -51,6 +51,7 @@
 }
 #en-rechts{
    background-color: #F3B47C;
+   color:#333;
 }
 
    @media screen and (max-width: 1024px) {
