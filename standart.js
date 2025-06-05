@@ -46,3 +46,29 @@ function goToRandomPage() {
     window.location.href = selectedPage;
   }
   
+
+function goToRandomPageEN() {
+    // Liste deiner Subpages
+    const subpages = [
+      'Essen/en/asia(en).html',
+      'Essen/en/backer(en).html',
+      'Essen/de/bayres(de).html',
+      'Essen/de/doener(de).html',
+      'Essen/de/coffee(de).html',
+      'Essen/de/italian(de).html',
+      'Freizeit und Kultur/culture.html',
+      'Freizeit und Kultur/freizeit.html',
+      'Shopping/clothing.html',
+      'Shopping/creative.html',
+      'Shopping/drugs.html',
+      'Shopping/HEP.html'
+    ];
+  
+    // Wähle eine zufällige Seite
+    const randomIndex = Math.floor(Math.random() * subpages.length);
+    const selectedPage = subpages[randomIndex];
+  
+    // Weiterleitung
+    window.location.href = selectedPage;
+  }
+  
