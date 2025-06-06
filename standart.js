@@ -52,7 +52,8 @@ function goToRandomPageEN() {
     const subpages = [
       'Essen/en/asia(en).html',
       'Essen/en/backer(en).html',
-      'Essen/en/italian(en).html'
+      'Essen/en/italian(en).html',
+      'Essen/en/bayres(en).html',
     ];
   
     // Wähle eine zufällige Seite
