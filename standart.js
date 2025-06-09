@@ -54,6 +54,8 @@ function goToRandomPageEN() {
       'Essen/en/backer(en).html',
       'Essen/en/italian(en).html',
       'Essen/en/bayres(en).html',
+      'Essen/en/coffee(en).html',
+      'Essen/en/doener(en).html'
     ];
   
     // Wähle eine zufällige Seite
