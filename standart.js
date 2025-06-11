@@ -30,11 +30,14 @@ function goToRandomPage() {
       'Essen/de/doener(de).html',
       'Essen/de/coffee(de).html',
       'Essen/de/italian(de).html',
-      'Freizeit und Kultur/de/kirchen.html',
       'Shopping/de/clothing.html',
       'Shopping/de/creative.html',
       'Shopping/de/drugs.html',
-      'Shopping/de/HEP.html'
+      'Shopping/de/HEP.html',
+      'Freizeit und Kultur/de/kirchen.html',
+      'Freizeit und Kultur/de/Freizeitanlage.html',
+      'Freizeit und Kultur/de/KZentrum',
+      'Freizeit und Kultur/de/spielplatz.html'
     ];
   
     // Wähle eine zufällige Seite
@@ -58,7 +61,11 @@ function goToRandomPageEN() {
       'Shopping/en/clothing.html',
       'Shopping/en/creative.html',
       'Shopping/en/drugs.html',
-      'Shopping/en/HEP.html'
+      'Shopping/en/HEP.html',
+      'Freizeit und Kultur/en/church.html',
+      'Freizeit und Kultur/en/freetime.html',
+      'Freizeit und Kultur/en/Ccenter.html',
+      'Freizeit und Kultur/en/Playgrounds.html'
     ];
   
     // Wähle eine zufällige Seite
