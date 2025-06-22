@@ -38,3 +38,7 @@
         @media (max-width: 768px){
             .box{margin-left: 5%; width: 90%;}
         }
+
+        main{
+            margin-bottom: 10vh;
+        }
