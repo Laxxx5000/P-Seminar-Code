@@ -14,6 +14,9 @@ body{
     margin-right: 10vw;
     line-height: 1.4;
 }
+.contentOnTextpage a{
+    color: #e48838;
+}
 main{
     margin-top: 11vh;
 }
